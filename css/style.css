@@ -47,7 +47,7 @@ body {
   position: absolute;
   top: -15px;
   left: -15px;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .container p.active::after {
