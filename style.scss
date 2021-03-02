@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e1e1e1;
+    font-family: 'Akaya Telivigala', cursive;
+}
+.container {
+    small {
+        margin-top: 30px;
+        display: none;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    p {
+        font-size: 25px;
+        padding: 2rem 1.3rem;
+        padding-right: 3rem;
+        border: 1px #9fa4a8 solid ;
+        border-radius: 10px;
+        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1),0px 5px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 35px;
+        transition: .2s ease;
+        &.active {
+            background-color: #fff;
+            
+            &::before, &::after {
+                content: "\f075";
+                font-family: "Font Awesome 5 Free";
+                color: #2ecc71;
+                font-size: 6rem;
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                opacity: 0.3;
+            }
+            &::after {
+                top: 1.7rem;
+                left: 2rem;
+            }
+            &::before {
+                color: #3498db;
+                transform: rotateY(180deg);
+            }
+            
+            small {
+                display: block;
+            }
+            button  {
+                right: .8rem;
+                i:first-child {
+                    display: block;
+                    position: relative;
+                }
+                i:last-child {
+                    display: none;
+                    
+                }
+            }
+
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            border: none;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            i {
+                font-size: 1.2rem;
+                &:first-child {
+                    position: absolute;
+                    display: none;
+                }
+            
+            }
+        }
+        &:focus {
+            background-color: #fff;
+        }
+    }
+}
+@media(max-width:600px) {
+    .container {
+        p {
+        font-size: 18px;
+        padding: 1rem;
+        margin: 35px 2rem;
+        }
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
